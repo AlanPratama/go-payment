@@ -15,6 +15,7 @@
 - [JWT](https://github.com/dgrijalva/jwt-go) v4
 - [GORM](https://gorm.io/) for ORM
 - [GoFiber](https://gofiber.io/) for web framework
+- [Postman Collection](https://github.com/AlanPratama/go-payment/blob/main/Go%20Payment%20API.postman_collection.json)
 
 ## Getting Started
 
@@ -25,26 +26,20 @@ git clone https://github.com/alanpratama/go-payment.git
 cd go-payment
 ```
 
-### 2. Install Dependencies
-
-```bash
-go mod tidy
-```
-
-### 3. Set up your MySQL database and update the connection details in
+### 2. Set up your MySQL database and update the connection details in
 **connection.go**
 ```go
 connection, err := gorm.Open(mysql.Open("root:@/go_payment"), &gorm.Config{})
 ```
 Note: default database name is **go_payment**, you can change with your own database, and change db name in connection.go
 
-### 4. Run the application
+### 3. Run the application
 
 ```bash
 go run main.go
 ```
 
-### 5. The server will run on http://localhost:3000.
+### 4. The server will run on http://localhost:3000.
 
 ```bash
 [BASE URL]
@@ -104,3 +99,4 @@ http://localhost:3000/api/v1
 ```
 [GET] /api/v1/history/logout
 ```
+
